@@ -26,7 +26,7 @@ app.use((req, res) => {
   res.render("404");
 });
 
-const port = process.env.port;
+const port = process.env.PORT;
 app.listen(port, () => {
   console.log(`Application running on port :: ${port}`);
 });
