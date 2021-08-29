@@ -26,7 +26,7 @@ app.use((req, res) => {
   res.render("404");
 });
 
-const port = 3000 || process.env.port;
+const port = process.env.port;
 app.listen(port, () => {
   console.log(`Application running on port :: ${port}`);
 });
