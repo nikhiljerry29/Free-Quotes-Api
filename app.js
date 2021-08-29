@@ -22,8 +22,8 @@ const quotesRoute = require("./routes/quotes.route");
 app.use("/quotes", quotesRoute);
 
 // error 404 page
-app.use("*", (req, res) => {
-  res.send("error");
+app.use((req, res) => {
+  res.render("404");
 });
 
 const port = 3000 || process.env.port;

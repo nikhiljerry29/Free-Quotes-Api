@@ -1,14 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
-const Quote = require("../models/quote.model");
+const quoteController = require("../controllers/quote.controller");
 
-router.get("/", (req, res) => {
-  Quote.find({})
-    .then((quotes) => {
-      res.json(quotes);
-    })
-    .catch((err) => console.log(err));
-});
+router.get("/", quoteController.getQuotes);
 
 module.exports = router;

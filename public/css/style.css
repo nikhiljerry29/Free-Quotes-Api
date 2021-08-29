@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+#error {
+  background-color: #f7f6f2;
+}
+
+#error .row {
+  height: 65vh;
+}
