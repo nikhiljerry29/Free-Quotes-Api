@@ -1,4 +1,5 @@
 # Basic Quotes Api
+An Express.Js Simple API for fetching various quotes for you application. The quotes which are being fetched from database are mostly selected from Kaggle Quotes Dataset.
 
 ### List of Tools Used
 1. [Express.js](https://expressjs.com)

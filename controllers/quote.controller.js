@@ -24,5 +24,15 @@ exports.getRandomQuote = (req, res) => {
 };
 
 exports.postQuotes = (req, res) => {
-  
-}
+  const quote = req.body.quote;
+  const author = req.body.author;
+
+  const newQuote = new Quote({
+    quote,
+    author,
+  });
+
+  newQuote.save();
+
+  res.redirect("/");
+};

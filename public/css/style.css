@@ -25,5 +25,9 @@ body {
 
 .accordion-button:focus,
 .accordion-button:not(.collapsed) {
-  background-color: #F3F1F5;
+  background-color: #f3f1f5;
+}
+
+.text-color-1 {
+  color: #3e00ff;
 }
