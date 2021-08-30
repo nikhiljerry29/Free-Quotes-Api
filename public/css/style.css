@@ -15,3 +15,15 @@ body {
 #home .col {
   margin: 35px auto !important;
 }
+
+.accordion-button,
+.accordion-button:focus,
+.accordion-button:not(.collapsed) {
+  color: #3e00ff;
+  box-shadow: 0 0 0 0;
+}
+
+.accordion-button:focus,
+.accordion-button:not(.collapsed) {
+  background-color: #F3F1F5;
+}
