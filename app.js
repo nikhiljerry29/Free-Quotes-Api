@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
 
 // Quotes Route
 const quotesRoute = require("./routes/quotes.route");
-app.use("/quotes", quotesRoute);
+app.use("/api/quotes", quotesRoute);
 
 // error 404 page
 app.use((req, res) => {

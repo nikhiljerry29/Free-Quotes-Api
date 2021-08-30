@@ -4,10 +4,14 @@
   font-family: "Poppins", sans-serif;
 }
 
-#error {
+body {
   background-color: #f7f6f2;
 }
 
 #error .row {
   height: 65vh;
+}
+
+#home .col {
+  margin: 35px auto !important;
 }

@@ -1,7 +1,5 @@
 # Basic Quotes Api
 
----
-
 ### List of Tools Used
 1. [Express.js](https://expressjs.com)
 2. [Mongoose](https://mongoosejs.com)
