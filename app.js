@@ -1,23 +1,32 @@
 require("dotenv").config();
 
-const express = require("express");
 const mongoose = require("mongoose");
-const app = express();
-
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
 
+const express = require("express");
+const app = express();
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static(`${__dirname}/public`));
+app.use("/js", express.static(__dirname + "/node_modules/bootstrap/dist/js")); // redirect bootstrap JS
+app.use("/js", express.static(__dirname + "/node_modules/jquery/dist")); // redirect JS jQuery
+app.use(
+  "/bootstrap",
+  express.static(__dirname + "/node_modules/bootstrap/dist/css")
+); // redirect CSS bootstrap
 app.set("view engine", "ejs");
 
 // Home Route
-app.get("/", (req, res) => {
-  res.render("home");
+const randomQuote = require("./util/random-quote.util");
+app.get("/", async (req, res) => {
+  res.render("home", {
+    randomQuote: await randomQuote(),
+  });
 });
 
 // Quotes Route
@@ -31,5 +40,5 @@ app.use((req, res) => {
 
 const port = process.env.PORT;
 app.listen(port, () => {
-  console.log(`Application running on port :: ${port}`);
+  console.warn(`Application running on port :: ${port}`);
 });

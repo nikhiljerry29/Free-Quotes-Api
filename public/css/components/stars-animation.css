@@ -1,0 +1,78 @@
+#ring-1,
+#ring-2,
+#Moon,
+#red-small-stars,
+#gray-small-stars {
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#ring-1 {
+  animation: ring 1s infinite linear alternate;
+}
+
+@keyframes ring {
+  from {
+    transform: rotateZ(0deg);
+  }
+
+  to {
+    transform: rotateZ(5deg);
+  }
+}
+
+#ring-2 {
+  animation: ring2 1s infinite linear alternate;
+}
+
+@keyframes ring2 {
+  from {
+    transform: rotateZ(0deg);
+  }
+
+  to {
+    transform: rotateZ(15deg);
+  }
+}
+
+#Moon {
+  animation: moon 5s infinite linear;
+}
+
+@keyframes moon {
+  from {
+    transform: rotateZ(0deg);
+  }
+
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+#red-small-stars {
+  animation: red-star 1.5s infinite linear alternate;
+}
+
+@keyframes red-star {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0.95);
+  }
+}
+
+#gray-small-stars {
+  animation: gray-star 1.5s infinite linear alternate;
+}
+
+@keyframes gray-star {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0.85);
+  }
+}

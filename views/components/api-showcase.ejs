@@ -1,0 +1,81 @@
+<div class="accordion accordion-flush" id="api-showcase">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="api-showcase-first">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#api-showcase-first-collapse"
+        aria-expanded="false"
+        aria-controls="api-showcase-first-collapse"
+      >
+        Get All Quotes
+      </button>
+    </h2>
+    <div
+      id="api-showcase-first-collapse"
+      class="accordion-collapse collapse show"
+      aria-labelledby="api-showcase-first"
+      data-bs-parent="#api-showcase"
+    >
+      <div class="accordion-body">
+        <p>
+          To get the list of all the quotes in the database, go to the route:
+        </p>
+        <p
+          class="
+            lead
+            mb-0
+            p-2
+            bg-light
+            text-dark
+            border border-2
+            rounded
+            border-success
+          "
+        >
+          /api/quotes
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="api-showcase-third">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#api-showcase-third-collapse"
+        aria-expanded="false"
+        aria-controls="api-showcase-third-collapse"
+      >
+        Get Random Quote
+      </button>
+    </h2>
+    <div
+      id="api-showcase-third-collapse"
+      class="accordion-collapse collapse"
+      aria-labelledby="api-showcase-third"
+      data-bs-parent="#api-showcase"
+    >
+      <div class="accordion-body">
+        <p>To get only one quote from the database, go to the route:</p>
+        <p
+          class="
+            lead
+            mb-0
+            p-2
+            bg-light
+            text-dark
+            border border-2
+            rounded
+            border-success
+          "
+        >
+          /api/random
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

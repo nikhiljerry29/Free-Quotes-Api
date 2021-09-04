@@ -1,21 +1,35 @@
 <%- include ("./partials/header") %>
-<section id="home">
-  <div class="col col-10 col-md-6 mx-auto mt-3 text-center">
-    <h1 class="text-success">Quotes Api 🌛</h1>
-    <h5>
-      Created by
-      <a
-        href="https://github.com/nikhiljerry29"
-        target="_blank"
-        class="text-decoration-none text-color-1"
-      >
-        Nikhil Gupta</a
-      >
-      , © 2021
-    </h5>
-  </div>
+<section id="home" class="my-5 mx-4">
+  <div class="row">
+    <div class="col-sm-8 col-md-7 col-lg-6 col-xl-5 mx-auto">
+      <h1 class="text-">Quotes Api</h1>
+      <h5>
+        Created by
+        <a
+          href="https://github.com/nikhiljerry29"
+          target="_blank"
+          class="text-decoration-none text-color-1"
+        >
+          Nikhil Gupta</a
+        >
+        , © 2021
+      </h5>
 
-  <!-- Api Showcase Section-->
-  <%- include ("./api-showcase") %>
+      <div class="quote-section my-3">
+        <h4><%= randomQuote.quote %></h4>
+        <p class="mb-0 pb-0 fst-italic"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
+          <path d="M0 8a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1z"/>
+        </svg></i> <%= randomQuote.author %></p>
+      </div>
+
+      <div class="w-75 mx-auto">
+        <%- include ("./components/message.svg.ejs") %>
+      </div>
+      <!-- Api Showcase Section-->
+      <div class="mt-4">
+        <h4>Usage:</h4>
+        <%- include ("./components/api-showcase") %></div>
+    </div>
+  </div>
 </section>
 <%- include ("./partials/footer") %>
