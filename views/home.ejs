@@ -6,21 +6,26 @@
       <h5>
         Created by
         <a
-          href="https://github.com/nikhiljerry29"
-          target="_blank"
-          class="text-decoration-none text-color-1"
+        href="https://github.com/nikhiljerry29"
+        target="_blank"
+        class="text-decoration-none text-color-1"
         >
-          Nikhil Gupta</a
+        Nikhil Gupta</a
         >
         , © 2021
       </h5>
-
+      
       <div class="quote-section my-3">
         <h4><%= randomQuote.quote %></h4>
         <p class="mb-0 pb-0 fst-italic"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
           <path d="M0 8a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1z"/>
         </svg></i> <%= randomQuote.author %></p>
       </div>
+
+      <p class="">
+        Total Number of Requests :
+        <%= requestStats.randomQuoteReqs + requestStats.allQuotesReqs %> 
+      </p>
 
       <div class="w-75 mx-auto">
         <%- include ("./components/message.svg.ejs") %>

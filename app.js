@@ -21,13 +21,13 @@ app.use(
 ); // redirect CSS bootstrap
 app.set("view engine", "ejs");
 
-// Home Route
-const randomQuote = require("./util/random-quote.util");
 app.get("/", async (req, res) => {
-  res.render("home", {
-    randomQuote: await randomQuote(),
-  });
+  res.redirect("/home");
 });
+
+// Home Routes
+const homeRoute = require("./routes/home.route");
+app.use("/home", homeRoute);
 
 // Quotes Route
 const quotesRoute = require("./routes/quotes.route");
